@@ -36,3 +36,4 @@ jobs:
         GITHUB_TOKEN: "${{ steps.get_workflow_token.outputs.token }}"
       run: |
         npm run release -- minor --verbose --ci
+#end
