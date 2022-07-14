@@ -22,5 +22,8 @@
   "dependencies": {
     "build": "^0.1.4",
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "release-it": "^15.1.1"
   }
 }
