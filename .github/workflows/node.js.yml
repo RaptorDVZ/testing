@@ -31,16 +31,16 @@ jobs:
 #ab
 
 
-      # - name: Publish the package and an artifact to Github Releases
+      - name: Publish the package and an artifact to Github Releases
 
-      #   id: release-checks
+        id: release-checks
 
-      #   continue-on-error: true
+        continue-on-error: true
 
-      #   env:
+        env:
 
-      #     GITHUB_TOKEN: "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"
+          GITHUB_TOKEN: "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"
 
-      #   run: |
+        run: |
 
-      #     npm run release -- minor --verbose --ci
+          npm run release -- minor --verbose --ci
