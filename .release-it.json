@@ -9,7 +9,7 @@
     "requireBranch": false,
     "requireUpstream": true,
     "requireCommits": false,
-    "addUntrackedFiles": true,
+    "addUntrackedFiles": false,
     "commit": true,
     "commitMessage": "Release ${version}",
     "commitArgs": [],
