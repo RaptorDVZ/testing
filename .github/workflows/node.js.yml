@@ -36,4 +36,4 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.TOKEN }}"
       run: |
         npm run release -- minor --verbose --ci
-#en
+#e
