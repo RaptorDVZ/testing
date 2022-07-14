@@ -3,6 +3,8 @@ name: Node.js CI
 on:
   push:
     branches: [ test1 ]
+env:
+  GITHUB_TOKEN: "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"
 
 jobs:
   build:
@@ -39,7 +41,7 @@ jobs:
 
         env:
 
-          GITHUB_TOKEN: "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"
+          GITHUB_TOKEN: ${{env.GITHUB_TOKEN}}
 
         run: |
 
