@@ -45,4 +45,4 @@ jobs:
         git config --global user.email "sdivyanshu105@gmail.com"
         git config --global user.name "Divyanshu"
         npm run release --minor --verbose --ci
-#
+
