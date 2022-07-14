@@ -26,7 +26,7 @@ jobs:
 
       run: |
 
-        tar -cvf production.tar index.js .release-it.json package*.json
+        tar -cvf production.tar index.js package*.json
 
 #ab
     - name: Publish the package and an artifact to Github Releases
