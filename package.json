@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "current-version": "release-it --release-version --dry-run --no-increment --ci --no-requireCleanWorkingDir",
+    "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +20,10 @@
   },
   "homepage": "https://github.com/RaptorDVZ/testing#readme",
   "dependencies": {
+    "build": "^0.1.4",
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "release-it": "^15.1.1"
   }
 }
