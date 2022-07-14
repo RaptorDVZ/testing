@@ -40,7 +40,8 @@ jobs:
 
 #ab
     - name: Publish the package and an artifact to Github Releases
-
+      env:
+        GITHUB_TOKEN: ${{env.GITHUB_TOKEN}}
       id: release-checks
       run: |
         git config --global user.email "sdivyanshu105@gmail.com"
