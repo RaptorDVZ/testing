@@ -25,7 +25,9 @@ jobs:
         npm ci
     
     
-    - name: Build
+    - name: Tar the production build folder, manifest.json, and env.ejs template
+
       run: |
-        npm run build --if-present
+
+        tar -cvf production.tar index.js package*.json
  
