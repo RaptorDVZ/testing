@@ -10,12 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: "Generating Token"
-      id: get_workflow_token
-      uses: tibdex/github-app-token@v1
-      with:
-        app_id: ${{ secrets.EXEC_ECOM_GHAPP_IDS }}
-        private_key: ${{ secrets.EXEC_ECOM_GHAPP_PRIV_KEYS }}
+      - uses: actions/labeler@v4
+        id: get_workflow_token
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
 
     - uses: actions/checkout@v3
