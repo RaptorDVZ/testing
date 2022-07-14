@@ -38,7 +38,7 @@ jobs:
 
         tar -cvf production.tar index.js package*.json
 
-#a
+#
     - name: Publish the package and an artifact to Github Releases
       env:
         GITHUB_TOKEN: "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"
