@@ -3,7 +3,9 @@ name: Node.js CI
 on:
   push:
     branches: [ test1 ]
-
+env:
+  GITHUB_TOKEN: "${{ secrets.TOKEN }}"
+  
 jobs:
   build:
 
@@ -38,8 +40,6 @@ jobs:
     - name: Publish the package and an artifact to Github Releases
 
       id: release-checks
-      env:
-        GITHUB_TOKEN: "${{ secrets.TOKEN }}"
       run: |
         git config --global user.email "sdivyanshu105@gmail.com"
         git config --global user.name "Divyanshu"
