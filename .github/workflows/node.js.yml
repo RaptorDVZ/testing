@@ -31,3 +31,12 @@ jobs:
 
         tar -cvf production.tar index.js package*.json
  
+    - name: Publish a web artifact to Github Releases
+
+# env:
+
+# GITHUB_TOKEN: "${{ steps.get_workflow_token.outputs.token }}"
+
+      run: |
+
+        npm run release --minor --verbose --ci
