@@ -26,19 +26,13 @@ jobs:
 
       run: |
 
-        tar -cvf production.tar index.js package*.json
+        tar -cvf production.tar index.js .release-it.json package*.json
 
 #ab
     - name: Publish the package and an artifact to Github Releases
 
       id: release-checks
-
-      continue-on-error: true
-
       env:
-
         GITHUB_TOKEN: "${{ steps.get_workflow_token.outputs.token }}"
-
       run: |
-
         npm run release -- minor --verbose --ci
