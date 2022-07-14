@@ -39,7 +39,7 @@ jobs:
 
       id: release-checks
       env:
-        GITHUB_TOKEN: "${{ steps.get_workflow_token.outputs.token }}"
+        GITHUB_TOKEN: "${{ secrets.TOKEN }}"
       run: |
         npm run release -- minor --verbose --ci
 #
