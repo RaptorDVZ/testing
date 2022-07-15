@@ -29,7 +29,7 @@
     "releaseNotes": null,
     "preRelease": false,
     "draft": false,
-    "tokenRef": "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",
+    "tokenRef": "${{env.GITHUB_TOKEN}}",
     "assets": ["production.tar"],
     "host": null,
     "timeout": 0,
