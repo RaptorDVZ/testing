@@ -7,6 +7,7 @@
     "current-version": "release-it --release-version --dry-run --no-increment --ci --no-requireCleanWorkingDir",
     "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
+   
   },
   "repository": {
     "type": "git",

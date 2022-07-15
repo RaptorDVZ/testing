@@ -32,7 +32,7 @@ jobs:
         npm ci
     
     
-    - name: Tar the production build folder, manifest.json, and env.ejs template
+    - name: Build
 
       run: |
 
