@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
 env:
-  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+  TOKEN: ${{ secrets.TOKEN }}
 
 #jobs
 
@@ -41,7 +41,7 @@ jobs:
 #
     - name: Publish the package and an artifact to Github Releases
       env:
-        GITHUB_TOKEN: "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"
+        GITHUB_TOKEN: ${{env.TOKEN}}
       id: release-checks
       run: |
         git config --global user.email "sdivyanshu105@gmail.com"
