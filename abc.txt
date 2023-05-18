@@ -20,3 +20,5 @@
 \          elastic_pool:
 \            name: "{{ _stratosphere_sql_elastic_pool['resource']['name'] }}"
 \        wait_time: 1200 # 20 minutes
+
+
