@@ -1,0 +1,19 @@
+name: Add Code to Python File
+
+on:
+  push:
+    branches:
+      - def
+
+jobs:
+  Add-code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Add code to Python file
+        run: |
+          sed -e '$r code.txt' -i target_file.txt
+
