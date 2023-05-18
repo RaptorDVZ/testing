@@ -15,5 +15,5 @@ jobs:
 
       - name: Add code to Python file
         run: |
-          sed -e '$r code.txt' -i target_file.txt
+          sed -e '$r abc.txt' -i ./ab.txt
 
