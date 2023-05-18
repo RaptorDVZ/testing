@@ -17,3 +17,11 @@ jobs:
         run: |
           sed -e '$r abc.txt' -i ./ab.txt
 
+      - name: Commit changes
+        run: |
+          git config --global user.email "sdivyanshu105@gmail.com"
+          git config --global user.name "RaptorDVZ"
+          git commit -am "Append text"
+          git push
+
+    
