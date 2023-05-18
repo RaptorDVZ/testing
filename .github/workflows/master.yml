@@ -1,10 +1,10 @@
 name: Node.js CI
 
-on:
-  push:
-    branches: [ main ]
-env:
-  TOKEN: ${{ secrets.TOKEN }}
+# on:
+#   push:
+#     branches: [ main ]
+# env:
+#   TOKEN: ${{ secrets.TOKEN }}
 
 #jobs
 

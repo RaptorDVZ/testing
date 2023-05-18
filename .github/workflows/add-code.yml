@@ -3,7 +3,7 @@ name: Add Code to Python File
 on:
   push:
     branches:
-      - def
+      - main
 
 jobs:
   Add-code:
