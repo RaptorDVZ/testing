@@ -17,7 +17,7 @@ jobs:
 
       - name: Add code to Python file
         run: |
-          sed -i '$a\- name: "Deploy SQL Database"\n  register: "_stratosphere_sql_database"\n  by.stratosphere.resource:\n    stage: "{{ stratosphere_stage }}"\n    geography: "{{ stratosphere_geography }}"\n    client_id: "{{ stratosphere_service_account_client_id }}"\n    client_secret: "{{ stratosphere_service_account_client_secret }}"\n    project: "{{ stratosphere_project_name }}"\n    name: "${{ input.ENV-NAME }}"\n    type: "azure-sql-database"\n    spec:\n      database:\n        sku:\n          name: "Basic"\n        max_size_bytes:\n        zone_redundant: false\n        license_type: "BasePrice"\n      server:\n        name: "{{ _stratosphere_sql_server['resource']['name'] }}"\n      elastic_pool:\n        name: "{{ _stratosphere_sql_elastic_pool['resource']['name'] }}"\n    wait_time: 1200 # 20 minutes' ab.txt
+          sed -i '$a\- name: "Deploy SQL Database"\n  register: "_stratosphere_sql_database"\n  by.stratosphere.resource:\n    stage: "{{ stratosphere_stage }}"\n    geography: "{{ stratosphere_geography }}"\n    client_id: "{{ stratosphere_service_account_client_id }}"\n    client_secret: "{{ stratosphere_service_account_client_secret }}"\n    project: "{{ stratosphere_project_name }}"\n    name: "${{ github.event.input.ENV-NAME }}"\n    type: "azure-sql-database"\n    spec:\n      database:\n        sku:\n          name: "Basic"\n        max_size_bytes:\n        zone_redundant: false\n        license_type: "BasePrice"\n      server:\n        name: "{{ _stratosphere_sql_server['resource']['name'] }}"\n      elastic_pool:\n        name: "{{ _stratosphere_sql_elastic_pool['resource']['name'] }}"\n    wait_time: 1200 # 20 minutes' ab.txt
 
 
 
