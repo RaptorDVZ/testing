@@ -89,3 +89,25 @@ Here comes the code
       elastic_pool:
         name: "{{ _stratosphere_sql_elastic_pool[resource][name] }}"
     wait_time: 1200 # 20 minutes
+- name: "Deploy SQL Database"
+  register: "_stratosphere_sql_database"
+  by.stratosphere.resource:
+    stage: "{{ stratosphere_stage }}"
+    geography: "{{ stratosphere_geography }}"
+    client_id: "{{ stratosphere_service_account_client_id }}"
+    client_secret: "{{ stratosphere_service_account_client_secret }}"
+    project: "{{ stratosphere_project_name }}"
+    name: ""
+    type: "azure-sql-database"
+    spec:
+      database:
+        sku:
+          name: "Basic"
+        max_size_bytes:
+        zone_redundant: false
+        license_type: "BasePrice"
+      server:
+        name: "{{ _stratosphere_sql_server[resource][name] }}"
+      elastic_pool:
+        name: "{{ _stratosphere_sql_elastic_pool[resource][name] }}"
+    wait_time: 1200 # 20 minutes
