@@ -1,0 +1,31 @@
+name: Checkbox Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      option1:
+        description: 'Option 1'
+        required: false
+        default: 'false'
+      option2:
+        description: 'Option 2'
+        required: false
+        default: 'false'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run tasks
+        run: |
+          if [ "${{ github.event.inputs.option1 }}" == "true" ]; then
+            echo "Option 1 is selected."
+          fi
+
+          if [ "${{ github.event.inputs.option2 }}" == "true" ]; then
+            echo "Option 2 is selected."
+          fi
