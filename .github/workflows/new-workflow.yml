@@ -7,10 +7,15 @@ on:
         description: 'Option 1'
         required: false
         default: 'false'
-      option2:
-        description: 'Option 2'
-        required: false
-        default: 'false'
+      use-emoji1:
+        type: boolean
+        description: Include 🎉🤣 emojis
+      use-emoji2:
+        type: boolean
+        description: Include 🎉🤣 emojis
+      use-emoji3:
+        type: boolean
+        description: Include 🎉🤣 emojis
 
 jobs:
   build:
