@@ -3,10 +3,10 @@ name: Checkbox Workflow
 on:
   workflow_dispatch:
     inputs:
-      option1:
-        description: 'Option 1'
+      Name:
+        description: 'Name'
         required: false
-        default: 'false'
+        default: 'Name'
       use-emoji1:
         type: boolean
         description: Option 1
@@ -29,6 +29,6 @@ jobs:
             echo "Option 1 is selected."
           fi
 
-          if [ "${{ github.event.inputs.emoji2 }}" == "true" ]; then
+          if [ "${{ github.event.inputs.use-emoji2 }}" == "true" ]; then
             echo "Option 2 is selected."
           fi
