@@ -3,19 +3,59 @@ name: Checkbox Workflow
 on:
   workflow_dispatch:
     inputs:
-      Name:
-        description: 'Name'
-        required: false
-        default: 'Name'
-      use-emoji1:
+      admin_line:
+        description: 'Admin Roles'
+      admin1:
         type: boolean
-        description: Option 1
-      description_only:
-        description: 'This is a description-only field'
-      use-emoji2:
+        description: by.yms.traileractivity.view
+      admin2:
         type: boolean
-        description: Option 2
-
+        description: by.yms.traileractivity.operate
+      admin3:
+        type: boolean
+        description: by.yms.traileractivity.manage
+      admin4:
+        type: boolean
+        description: user.read
+      admin5:
+        type: boolean
+        description: plat.lui.portal.settings.categories.yms-settings-operations-category.write
+      admin6:
+        type: boolean
+        description: plat.lui.portal.settings.categories.yms-settings-operations-category.read
+      admin7:
+        type: boolean
+        description: plat.lui.portal.settings.categories.yms-settings-operations-category.groups.yms-settings-operations-yard-group.write
+      admin8:
+        type: boolean
+        description: plat.lui.portal.settings.categories.yms-settings-operations-category.groups.yms-settings-operations-yard-group.read
+      yard_line:
+        description: 'Yard Roles'
+      yard1:
+        type: boolean
+        description: by.yms.traileractivity.view
+      yard2:
+        type: boolean
+        description: by.yms.traileractivity.operate
+      carrier_admin:
+        description: 'carrier_admin Roles'
+      carrier_admin1:
+        type: boolean
+        description: by.yms.carrierframework.view
+      carrier_admin2:
+        type: boolean
+        description: by.yms.carrierframework.operate
+      carrier_admin3:
+        type: boolean
+        description: by.yms.carrierframework.manage
+      carrier_operator:
+        description: 'carrier_operator Roles'
+      carrier_operator1:
+        type: boolean
+        description: by.yms.carrierframework.view
+      carrier_operator2:
+        type: boolean
+        description: by.yms.carrierframework.operate
 
 jobs:
   build:
