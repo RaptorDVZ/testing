@@ -30,5 +30,5 @@ jobs:
           fi
 
           if [ "${{ github.event.inputs.use-emoji2 }}" == "true" ]; then
-            echo "Option 2 is selected."
+            echo "${{ github.event.inputs.use-emoji2 }}"
           fi
