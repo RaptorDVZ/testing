@@ -10,6 +10,8 @@ on:
       use-emoji1:
         type: boolean
         description: Option 1
+      description_only:
+        description: 'This is a description-only field'
       use-emoji2:
         type: boolean
         description: Option 2
