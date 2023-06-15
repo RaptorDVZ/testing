@@ -9,13 +9,11 @@ on:
         default: 'false'
       use-emoji1:
         type: boolean
-        description: Include 🎉🤣 emojis
+        description: Option 1
       use-emoji2:
         type: boolean
-        description: Include 🎉🤣 emojis
-      use-emoji3:
-        type: boolean
-        description: Include 🎉🤣 emojis
+        description: Option 2
+
 
 jobs:
   build:
@@ -27,10 +25,10 @@ jobs:
 
       - name: Run tasks
         run: |
-          if [ "${{ github.event.inputs.option1 }}" == "true" ]; then
+          if [ "${{ github.event.inputs.use-emoji1 }}" == "true" ]; then
             echo "Option 1 is selected."
           fi
 
-          if [ "${{ github.event.inputs.option2 }}" == "true" ]; then
+          if [ "${{ github.event.inputs.emoji2 }}" == "true" ]; then
             echo "Option 2 is selected."
           fi
