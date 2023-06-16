@@ -1,0 +1,33 @@
+name: Checkbox Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      role_type:
+        description: 'Choose the role type'
+        required: true
+        default: 'admin'
+        options: ['admin', 'user']
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print selected role type
+        run: echo "Selected role type: ${{ github.event.inputs.role_type }}"
+
+      # - name: Run tasks
+      #   run: |
+      #     if [ "${{ github.event.inputs.use-emoji1 }}" == "true" ]; then
+      #       echo "Option 1 is selected."
+      #     fi
+
+      #     if [ "${{ github.event.inputs.use-emoji2 }}" == "true" ]; then
+      #       echo "${{ github.event.inputs.use-emoji2 }}"
+      #     fi
