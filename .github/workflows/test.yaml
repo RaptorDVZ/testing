@@ -14,12 +14,18 @@ jobs:
     
     steps:
 
-      - name: Make GET request
-        id: get_request
-        run: |
-          response=$(curl "https://reqres.in/api/users/${{ inputs.my_integer_input }}")
-          echo "::set-output name=response::$response"
+      # - name: Make GET request
+      #   id: get_request
+      #   run: |
+      #     response=$(curl "https://reqres.in/api/users/${{ inputs.my_integer_input }}")
+      #     echo "::set-output name=response::$response"
       
-      - name: Print response
+      - name: Make API POST request
         run: |
-          echo "Response: ${{ steps.get_request.outputs.response }}"
+          curl -X GET \
+            -H "Content-Type: application/json" \
+            "https://reqres.in/api/users/${{ inputs.my_integer_input }}"
+
+      # - name: Print response
+      #   run: |
+      #     echo "Response: ${{ steps.get_request.outputs.response }}"
