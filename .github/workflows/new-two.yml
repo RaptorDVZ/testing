@@ -20,7 +20,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print selected role type
-        run: echo "Selected role type: ${{ github.event.inputs.role_type }}"
+        run: |
+          echo "Selected role type: ${{ github.event.inputs.role_type }}"
 
       # - name: Run tasks
       #   run: |
