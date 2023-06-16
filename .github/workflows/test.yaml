@@ -1,0 +1,25 @@
+name: Integer Input and GET Request Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      my_integer_input:
+        description: 'Enter an integer value'
+        required: true
+        default: 42
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: Make GET request
+        id: get_request
+        run: |
+          response=$(curl "https://reqres.in/api/users/${{ inputs.my_integer_input }}")
+          echo "::set-output name=response::$response"
+      
+      - name: Print response
+        run: |
+          echo "Response: ${{ steps.get_request.outputs.response }}"
