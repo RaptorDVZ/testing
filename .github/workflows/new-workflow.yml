@@ -17,6 +17,7 @@ jobs:
       - name: Run tasks
         run: |
           sas=$(echo "tdm")
+          echo ::add-mask::$sas
           echo "ABC=$sas" >> "${GITHUB_ENV}"
 
       - name: Print
