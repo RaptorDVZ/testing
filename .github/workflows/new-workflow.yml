@@ -16,6 +16,7 @@ jobs:
 
       - name: Run tasks
         run: |
+          echo ::add-mask::$sas
           sas=$(echo "tdm")
           echo ::add-mask::$sas
           echo "ABC=$sas" >> "${GITHUB_ENV}"
