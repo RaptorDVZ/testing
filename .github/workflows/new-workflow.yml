@@ -1,22 +1,7 @@
 name: Checkbox Workflow
 
 on:
-  workflow_dispatch:
-    inputs:
-      admin_line:
-        description: 'Select the Roles for which you want to assign the policies'
-      Admin-Role:
-        type: boolean
-        description: Admin Role
-      Yard-operator:
-        type: boolean
-        description: Yard operator
-      Carrier-Admin:
-        type: boolean
-        description: Carrier Admin
-      Carrier-Operatore:
-        type: boolean
-        description: Carrier Operatore
+  push: [ tdm ]
 
 
 
@@ -30,10 +15,9 @@ jobs:
 
       - name: Run tasks
         run: |
-          if [ "${{ github.event.inputs.use-emoji1 }}" == "true" ]; then
-            echo "Option 1 is selected."
-          fi
+          sas="123450"
+          echo "ABC=$sas" >> "${GITHUB_ENV}"
 
-          if [ "${{ github.event.inputs.use-emoji2 }}" == "true" ]; then
-            echo "${{ github.event.inputs.use-emoji2 }}"
-          fi
+      - name: Print
+        run: |
+          echo "${{ env.ABC }}"
