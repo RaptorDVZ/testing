@@ -1,8 +1,9 @@
 name: Checkbox Workflow
 
 on:
-  push: [ tdm ]
-
+  push:
+    branches:
+      - tdm
 
 
 jobs:
