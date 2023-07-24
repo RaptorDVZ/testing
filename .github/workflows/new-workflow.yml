@@ -16,7 +16,7 @@ jobs:
 
       - name: Run tasks
         run: |
-          sas="123450"
+          sas=$(echo "tdm")
           echo "ABC=$sas" >> "${GITHUB_ENV}"
 
       - name: Print
